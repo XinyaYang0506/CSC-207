@@ -1,0 +1,29 @@
+1. File extension: we cannot change file extension from java to c, because
+we will get error message:
+error: Class names, 'exploringJAVA.c', are only accepted if annotation processing is explicitly requested
+
+
+2. file not found
+
+3. run successfully
+
+4. white space: Java is not sensitive between words, but is sensitive in
+words.
+case: sensitive in keywords, but not sensitive in variable names, even if
+they are default names (eg. main, args)
+
+5. error message: does not contain a main type
+
+6. error message will be showed and the function cannot run
+
+7.
+
+class:
+"public" is removable from class.
+
+public is the method of the function, and
+
+"public" and "static" can not be removed from main:
+
+Error: Main method not found in class exploringJAVA, please define the main method as:
+   public static void main(String[] args)
