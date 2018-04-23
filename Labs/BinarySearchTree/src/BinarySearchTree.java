@@ -33,21 +33,6 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		}
 	}
 
-	public int size2() {
-		List<T> pending = new LinkedList<>();
-		pending.add(root); 
-		int size = 0; 
-		while (pending.get(size) != null) {
-			Node<T> cur = pending.remove(0);
-			if (cur.left != null) {
-				pending.add(cur.left); }
-			if (cur.right != null) {
-				pending.add(cur.right);
-			}
-			size +=1;
-		}
-		return size;
-	}
 	
 	public int size() {
 		return sizeH(root);
@@ -72,11 +57,11 @@ public class BinarySearchTree<T extends Comparable<T>> {
 	
 	public static void main(String[] args) {
 		BinarySearchTree Tree1 = new BinarySearchTree();
-		System.out.println(Tree1.size2());
+		System.out.println(Tree1.size());
 		Tree1.insert(2);
-		System.out.println(Tree1.size2());
+		System.out.println(Tree1.size());
 		Tree1.insert(2);
-		System.out.println(Tree1.size2());
+		System.out.println(Tree1.size());
 	}
 	
 }

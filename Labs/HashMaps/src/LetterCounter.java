@@ -38,6 +38,7 @@ public class LetterCounter {
 	}
 
 	public void increment(char ch) {
+		//compute the index
 		PairSpecial cur = letterMap[((int)ch) % 100];
 		boolean check = false;
 		if (cur != null) {
@@ -45,14 +46,14 @@ public class LetterCounter {
 				cur.count = cur.count+1;
 				check = true;
 			}
-			
+
 			while (cur.next != null) {
 				if (cur.entry == ch) {
 					cur.count = cur.count+1;
 					check = true;
-				} 					
+				}
 				cur = cur.next;
-				
+
 			}
 
 			if (check == false) {
@@ -70,7 +71,7 @@ public class LetterCounter {
 		while (cur != null) {
 			if (cur.entry == ch) {
 				return cur.count;
-			} 
+			}
 			cur = cur.next;
 		}
 		throw new IllegalArgumentException();
@@ -78,7 +79,7 @@ public class LetterCounter {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		LetterCounter letter = new LetterCounter();
-		File input = new File("book.txt");
+		File input = new File("test.txt");
 		Scanner in = new Scanner(input);
 
 		while (in.hasNext()) {
